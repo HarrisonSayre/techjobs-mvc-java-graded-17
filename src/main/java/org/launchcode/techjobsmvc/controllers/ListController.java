@@ -22,6 +22,7 @@ public class ListController {
     static HashMap<String, Object> tableChoices = new HashMap<>();
 
     public ListController () {
+
         columnChoices.put("all", "All");
         columnChoices.put("employer", "Employer");
         columnChoices.put("location", "Location");
@@ -32,6 +33,9 @@ public class ListController {
         tableChoices.put("location", JobData.getAllLocations());
         tableChoices.put("positionType", JobData.getAllPositionTypes());
         tableChoices.put("coreCompetency", JobData.getAllCoreCompetency());
+
+        //WANNA FIGURE OUT HOW I COULD HAVE DONE THE OTHER WAY IN HERE
+        //tableChoices.put("all", JobData.findAll());
     }
 
     @GetMapping(value = "")
